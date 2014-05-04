@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "FTVFormat",
+    "version": "0.1",
+
+    "description": "Format Project Free TV season page to be more readable",
+    "icons": {
+        "64": "icon-128.png",
+        "128": "icon-256.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "icon-38.png",
+            "38": "icon-76.png"
+        },
+        "default_title": "FTVFormat",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://www.free-tv-video-online.me/*"],
+            "js": ["contentscript.js"],
+            "css": ["tv.css"],
+            "all_frames": true
+        }
+    ],
+    "permissions": [
+        "tabs", 
+        "http://www.free-tv-video-online.me/*",
+    ]
+}
